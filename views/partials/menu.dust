@@ -1,0 +1,29 @@
+<nav>
+  <div class="nav-wrapper">
+  {#images}
+    <a href="#" class="brand-logo center">{?title}{user}'s Profile {:else} Pinterest Clone{/title}</a>
+  {/images}
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li><a href="/">Home</a></li>
+      {#user}
+        <li><a href="/profile/images">My Images</a></li>
+        <li><a class="dropdown-button" data-activates="dropdown1" href="/profile">Add Photo<i class="material-icons right">arrow_drop_down</i></a></li>
+      {/user}
+    </ul>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a class="right" href="/auth/twitter"><i class="material-icons right">lock_outline</i>Sign in with Twitter</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="drop-box z-depth-5 blue-text indigo lighten-5 text-darken-2">
+  <div>
+    <form method="post" action="/upload">
+      <label for="name">Title</label>
+      <input type="text" name="name" placeholder="name" id="name">
+      <label for="img-url">Url</label>
+      <input type="url" id="img-url" name="url" placeholder="url">
+      <input type="submit" value="submit" class="btn deep-orange lighten-1">
+    </form>
+  </div>
+</div>
