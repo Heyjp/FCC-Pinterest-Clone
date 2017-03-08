@@ -1,3 +1,3 @@
 module.exports = {
-      url: "localhost:27017/pinterest"
+      url: process.env.MONGO_KEY
 }
