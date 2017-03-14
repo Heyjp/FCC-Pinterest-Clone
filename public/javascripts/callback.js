@@ -1,8 +1,7 @@
 $(document).ready(function () {
 
-
+  $(".button-collapse").sideNav();
   
-
   var removed = false;
   $('.drop-box').hide();
   $('.delete-image').unbind('click').bind('click', function (e) {

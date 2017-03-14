@@ -1,34 +1,36 @@
 {>base/}
 
 {<content}
-<div class="row">
-    <div class="grid center">
-      {#images}
+<div class="container">
+  <div class="row">
+      <div class="grid center">
         {#images}
-        <div class="grid-item">
-          <a href="/profile"><img src="{url}" href="/profile" class="grid-item--width3"onError="this.onerror=null;this.src='/images/broken.png';"></a>{~n}
-          <div class="title-block"><h5>{title}</h5>{~n}</div>
-          <div class="col-block">
-            <div class="img-block">
-              <a href="/profile/{user}"><img src="{avatar}" ></a>
+          {#images}
+          <div class="grid-item card">
+            {?delImg}
+              <i class="img-delete fa fa-trash fa-2x delete-image" aria-hidden="true" id="{_id}">
+              </i>
+            {/delImg}
+            <a href="/profile"><img src="{url}" href="/profile" class="grid-item--width3"onError="this.onerror=null;this.src='/images/broken.png';"></a>{~n}
+            <div class="card blue-grey darken-1 white-text title-holder">
+                <h4 class="title">{title}</h5>{~n}
             </div>
-              {?tonk}
-                <button class="delete-image" id="{_id}">
-                  Cancel
-                </button>
-              {/tonk}
-            <div class="like-block">
-              <div class="btn likes" id="{_id}">
-                <i class="material-icons extra-small">stars</i>
-                <p>{userLikes.length}</p>
+            <div class="col-block">
+              <div class="img-block">
+                <a href="/profile/{user}"><img src={avatar} /></a>
+              </div>
+              <div class="like-block">
+                <div class="btn likes" id="{_id}">
+                  <i class="material-icons extra-small">stars</i>
+                  <p>{userLikes.length}</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+          {/images}
         {/images}
-      {/images}
-    </div>
-
+      </div>
+  </div>
 </div>
 
 <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.js"></script>

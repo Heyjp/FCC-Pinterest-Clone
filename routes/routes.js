@@ -6,24 +6,24 @@ module.exports = function (app, passport) {
   app.get('/', function(req, res) {
     if (!req.user) {
       Image.showImages(null, function (err, doc) {
-        console.log(doc);
         res.render('child', {images: doc});
       });
     } else {
       Image.showImages(null, function (err, doc) {
-        console.log(doc);
         res.render('child', {images: doc, user: true});
       });
     }
     });
 
-  app.get('/auth/twitter', passport.authenticate('twitter'));
+    app.get('/auth/twitter',
+    passport.authenticate('twitter'));
 
   app.get('/auth/twitter/callback',
-         passport.authenticate('twitter', {
-             successRedirect : '/',
-             failureRedirect : '/'
-         }));
+      passport.authenticate('twitter', { failureRedirect: '/' }),
+      function(req, res) {
+      // Successful authentication, redirect home.
+      res.redirect('/');
+    });
 
         // route for logging out
   app.get('/logout', function(req, res) {
@@ -39,7 +39,7 @@ module.exports = function (app, passport) {
       var user = req.user;
       Image.showImages(user, function (err, doc) {
         console.log(doc[0]);
-        res.render('child', {images: doc, tonk: true});
+        res.render('child', {images: doc, delImg: true});
       })
     });
 
@@ -47,14 +47,11 @@ module.exports = function (app, passport) {
   app.post('/upload', isLoggedIn, function (req, res) {
     var user = req.user;
     var img = req.body;
-    console.log(checkURL(img.url));
-    if (img.url !== "" && checkURL(img.url) === true) {
-      Image.storeImage(user, img, function (err, doc) {
-        res.redirect('/');
-      });
-  } else {
-    res.redirect('/')
-  }
+
+    Image.storeImage(user, img, function (err, doc) {
+      res.redirect('/');
+    });
+
   });
 
   app.delete('/delete', isLoggedIn, function (req, res) {
@@ -90,7 +87,6 @@ app.post('/likes', function (req, res) {
   });
 
   app.get('/test', function (req, res) {
-
     res.render('test');
   });
 
@@ -109,7 +105,9 @@ app.post('/likes', function (req, res) {
   }
   });
 
-
+  app.get('/add-image', function (req, res) {
+    res.render('add-image')
+  })
 
  };
 

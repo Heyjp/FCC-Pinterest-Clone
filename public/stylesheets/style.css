@@ -8,16 +8,12 @@ body {
 }
 
 .grid {
-  margin: 0 auto;
   width: 100%;
 }
 
-
 .grid-item {
-  width: 20%;
-  border: 2px solid black;
+  width: 23%;
   padding: 5px 5px 2px 5px;
-  background-color: white;
 }
 
 img {
@@ -25,9 +21,9 @@ img {
 }
 
 .col-block {
-  background: gray;
-  margin: 5px 0px;
-  padding: 10px 0px;
+  background: none;
+  margin: 2px 0px;
+  padding: 2px 0px;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -35,10 +31,8 @@ img {
 }
 
 .img-block img {
-  align-self: flex-start;
   height: 50px;
   width: 50px;
-  padding: 5px;
 }
 
 .like-block {
@@ -67,10 +61,12 @@ img {
 
 .drop-box {
   display: none;
+  transition: 0.6s;
   position: absolute;
+  top: 65px;
+  left: 189px;
   min-width: 120px;
-  max-width: 200px;
-  left: 170px;
+  max-width: 300px;
   border: 1px solid black;
   border-top: none;
   border-top-left-radius: : 0px;
@@ -79,10 +75,66 @@ img {
   z-index: 1000;
 }
 
+.drop-box input[type=submit] {
+
+}
+
 .show-menu {
   display: none;
 }
 
 nav {
   padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+@media screen and (max-width: 800px) {
+  .grid {
+    margin-left: 20px;
+  }
+  .grid-item {
+    width: 30%;
+  }
+
+  .drop-box {
+    display: none:
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .grid {
+    margin-left: 20px;
+  }
+  .grid-item {
+    width: 45%;
+  }
+}
+
+.title {
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.title-holder {
+  padding: 5px 10px;
+}
+
+.img-delete {
+  position: absolute;
+  right: 5px;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: black;
+  border: 2px solid gray;
+  color: white;
+}
+
+form h4 {
+  margin-top: 50px;
+  padding-bottom: 20px;
+}
+form button {
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
