@@ -139,9 +139,3 @@ form button {
   margin-top: 25px;
   margin-bottom: 25px;
 }
-
-
-.clipped {
-
-  clip: rect(0px, 140px, 140px, 0px);
-}
