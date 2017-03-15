@@ -40,7 +40,7 @@
       </div>
       <div class="input-field col s12 m12 l12">
         <label for="img-url">Image-Url</label>
-        <input type="url" id="img-url" name="Image URL" placeholder="url">
+        <input type="url" id="img-url" name="url" placeholder="url">
       </div>
       <div class="input-field col s12 m12 l12 center-align">
         <input type="submit" value="submit" class="center btn deep-orange lighten-1">

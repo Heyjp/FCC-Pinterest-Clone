@@ -4,5 +4,4 @@ module.exports = {
         'consumerSecret'    : process.env.CONSUMER_SECRET,
         'callbackURL'       : process.env.CALLBACK_URL
     }
-
 };
