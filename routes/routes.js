@@ -47,7 +47,6 @@ module.exports = function (app, passport) {
   app.post('/upload', isLoggedIn, function (req, res) {
 
     console.log(req.body, "this is req.body");
-
     var user = req.user;
     var img = req.body;
 
