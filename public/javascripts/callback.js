@@ -1,10 +1,11 @@
 $(document).ready(function () {
 
   $(".button-collapse").sideNav();
-  
+
   var removed = false;
   $('.drop-box').hide();
-  $('.delete-image').unbind('click').bind('click', function (e) {
+
+  $('.img-delete').unbind('click').bind('click', function (e) {
 
    e.preventDefault();
    var img = $(this);
@@ -16,10 +17,13 @@ $(document).ready(function () {
       type: 'DELETE',
       data: obj,
       success: function(result) {
+        location.reload();
+        /*
           // Do something with the result
           console.log("works");
           // finds the parent container and removes it :D:D:D:D:D
           img.parent().parent('.grid-item').remove();
+        */
         }
       });
       return false;
