@@ -102,7 +102,7 @@ app.post('/likes', function (req, res) {
   } else {
     Image.userImages(id, function (err, doc) {
       console.log(doc);
-      res.render('child', {images: doc, user: true, title: true});
+      res.render('child', {images: doc, user: false, title: true});
     });
   }
   });
