@@ -134,7 +134,14 @@ form h4 {
   margin-top: 50px;
   padding-bottom: 20px;
 }
+
 form button {
   margin-top: 25px;
   margin-bottom: 25px;
+}
+
+
+.clipped {
+
+  clip: rect(0px, 140px, 140px, 0px);
 }
