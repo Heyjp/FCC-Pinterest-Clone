@@ -8,7 +8,7 @@
       <li><a href="/">Home</a></li>
       {#user}
         <li><a href="/profile/images">My Images</a></li>
-        <li><a class="dropdown-button" data-activates="dropdown1" href="/profile">Add Photo<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-button" data-activates="dropdown1" href="#">Add Photo<i class="material-icons right">arrow_drop_down</i></a></li>
       {/user}
     </ul>
     <ul id="nav-mobile" class="right hide-on-med-and-down">

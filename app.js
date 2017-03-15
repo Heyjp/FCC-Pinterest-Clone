@@ -93,14 +93,4 @@ console.log(process.env.CONSUMER_KEY);
 console.log(process.env.CONSUMER_SECRET);
 console.log(process.env.CALLBACK_URL);
 
-
-
-
-
-
-
-
-
-
-
 module.exports = app;
