@@ -11,7 +11,7 @@
               <i class="img-delete fa fa-trash fa-2x delete-image" aria-hidden="true" id="{_id}">
               </i>
             {/delImg}
-            <a href="/profile"><img src="{url}" href="/profile" class="grid-item--width3"onError="this.onerror=null;this.src='/images/broken.png';"></a>{~n}
+            <a href="/profile/{user}"><img src="{url}" href="/profile/{user}" class="grid-item--width3"onError="this.onerror=null;this.src='/images/broken.png';"></a>{~n}
             <div class="card blue-grey darken-1 white-text title-holder">
                 <h4 class="title">{title}</h5>{~n}
             </div>
