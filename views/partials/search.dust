@@ -12,9 +12,6 @@
               </i>
             {/delImg}
             <a href="/profile/{user}"><img src="{url}" href="/profile/{user}" class="grid-item--width3"onError="this.onerror=null;this.src='/images/broken.png';"></a>{~n}
-            <div class="card black-text title-holder">
-                <h4 class="title">{title}</h5>{~n}
-            </div>
             <div class="col-block">
               <div class="img-block">
                 <a href="/profile/{user}"><img src={avatar} /></a>

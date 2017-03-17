@@ -1,4 +1,4 @@
-<nav>
+<nav class="green darken-1">
   <div class="nav-wrapper">
   {#images}
     <a href="#" class="brand-logo center">{?title}{user}'s Profile {:else}Pegtrest{/title}</a>

@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #CCCCCC;
+    background-color: #f5f5f5;
 }
 
 .grid {
@@ -112,12 +112,14 @@ nav {
 }
 
 .title {
-  font-weight: 500;
-  font-size: 1.5em;
+  font-weight: 400;
+  font-size: 1.3em;
+  margin: 10px;
 }
 
 .title-holder {
   padding: 5px 10px;
+
 }
 
 .img-delete {
@@ -139,3 +141,24 @@ form button {
   margin-top: 25px;
   margin-bottom: 25px;
 }
+
+.btn {
+  background-color: #4CAF50 !important;
+}
+
+ i {
+   color: #ffffff;
+ }
+
+ .title {
+   color: #212121 !important;
+ }
+
+.dark-primary-color    { background: #388E3C; }
+.default-primary-color { background: #4CAF50; }
+.light-primary-color   { background: #C8E6C9; }
+.text-primary-color    { color: #FFFFFF; }
+.accent-color          { background: #FFC107; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #757575; }
+.divider-color         { border-color: #BDBDBD; }
